@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .photo-comp-2 {
+            background: lightblue;
+        }
+        
+        .photo-comp-2 img {
+            width: 300px;
+            position: relative;
+            bottom: 10px;
+        }
+        
+        .photo-comp-2 .media .head h2 {
+            position: relative;
+            bottom: 60px;
+            left: 80px;
+            font-weight: bolder;
+        }
+        
+        .media-body .btn {
+            border-radius: 50px;
+        }
+        
+        .media-body .btn {
+            margin-left: 20px;
+        }
+        
+        .justify-me:not(.justify-me::first-line) {
+            background: red;
+        }
+        
+        @media(max-width: 768px) {
+            .media-body .btn {
+                margin-left: 5px;
+            }
+            .btn {
+                padding-left: 15px!important;
+                padding-right: 15px!important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="photo-comp-2 pb-4">
+        <div class="media">
+            <div class='head'>
+                <img class="align-self-start mr-3" src="singing event.png" alt="Generic placeholder image">
+                <h2 class="align-self-start mr-3 h4 text-uppercase">Shutter Bug</h2>
+            </div>
+            <div class="media-body mt-5 px-5">
+                <h5 class="mt-0 font-weight-bold d-inline ">Photography Competition</h5>
+                <button class="register btn btn-warning ml-5 px-4 py-2">Register</button>
+                <p class='text-danger font-italic'>Registration Amount: $79</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic tempora tenetur perferendis, modi a dicta quam! Cupiditate asperiores reiciendis error provident. Iusto mollitia sequi veritatis architecto commodi illo tempora quos?.</p>
+                <h5 class='font-weight-bold'>Guidelines:</h5>
+                <div>
+                    <p class='justify-me'>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis atque fuga veritatis ipsum. Molestiae beatae nemo aliquid repellat perferendis animi culpa unde quibusdam. Et perspiciatis sint, reiciendis dolore animi totam.</p>
+                    <p class='justify-me'>2. Lorem ipsum dolor sit aatque fuga veritatis ipsum. Molestiae beatae nemo aliquid repellat perferendis animi culpa unde quibusdam. Et perspiciatis sint, reiciendis dolore animi totam.</p>
+                    <p class='justify-me'>3. Lorem ipsum dolor sit aque fuga veritatis ipsum. Molestiae beatae nemo aliquid repellat perferendis animi culpa unde quibusdam. Et perspiciatis sint, reiciendis dolore animi totam.</p>
+                    <p class='justify-me'>4. Lorem ipsum dolor sit a Molestiae beatae nemo aliquid repellat perferendis animi culpa unde quibusdam. Et perspiciatis sint, reiciendis dolore animi totam.</p>
+                    One Entry/Participate
+                </div>
+                <h5 class='mt-4 font-weight-bold'>Judging Criteria:</h5>
+                <p class='justify-me'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        let media = '<div class="head"><img class="align-self-start mr-3" src="singing event.png" alt="Generic placeholder image"><h2 class="align-self-start mr-3 h4 text-uppercase">Shutter Bug</h2></div>';
+        console.log($(this).width())
+
+        function changer() {
+            if ($(this).width() <= 760) {
+                $('.head').remove()
+            } else {
+                if (!$('.head')) {
+                    $('.media').prepend(media);
+                }
+            }
+        }
+        $().ready(() => {
+            changer();
+        })
+
+
+
+        $(window).resize((e) => {
+            console.log($(this).width())
+            if ($(this).width() <= 760) {
+                $('.head').remove()
+            } else {
+                console.log($('.head').length)
+                if ($('.head').length == 0) {
+                    // alert(1)
+                    $('.media').prepend(media);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

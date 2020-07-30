@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .media .cols img {
+            padding: 5px;
+        }
+        
+        .medias .cols {
+            overflow: hidden;
+            transition: 500ms linear;
+            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .cols p {
+            position: relative;
+            color: rgb(80, 49, 49);
+            text-shadow: 1px 2px 3px silver;
+            font-weight: bolder;
+            font-size: 30px;
+            bottom: 200px;
+        }
+        
+        .medias img {
+            margin-top: 10px;
+            background: #ffffdd;
+            padding: 15px;
+            width: 400px;
+            transform: scale(.9);
+            border-radius: 50px;
+            transition: 500ms linear;
+        }
+        
+        .medias img:hover {
+            transform: scale(1);
+            transition: 500ms linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="medias">
+        <h3 class="text-center display-5 font-weight-bolder text-uppercase text-muted h2 my-3 font-weight-normal">Media</h3>
+        <div class="row">
+            <div class="cols m-auto col-sm-12 col-md-6 ">
+                <img class='img-thumbnail border-0' src="https://robohash.org/1" alt="">
+                <p class="lead">PRE EVENT</p>
+            </div>
+            <div class="cols m-auto col-sm-12 col-md-6">
+                <img class='img-thumbnail border-0' src="https://robohash.org/2" alt="">
+                <p class="lead">UPCOMING EVENT</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

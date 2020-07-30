@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .contact-form input {
+            font-size: 1rem;
+            padding: 2em;
+            border: 0px solid white;
+            background: whitesmoke;
+            margin-top: 2rem!important;
+            border-radius: 30px;
+        }
+        
+        .contact-form {
+            background: white;
+        }
+        
+        .contact-form .jumbotron {
+            margin-top: 30px;
+            border-radius: 50px;
+            max-width: 700px;
+        }
+        
+        .contact-form .textarea {
+            height: 150px;
+        }
+        
+        .contact-form .submits {
+            position: relative;
+            top: 15px;
+        }
+        
+        .contact-form .submits small {
+            position: relative;
+            bottom: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-form container">
+        <div class='jumbotron shadow w-100 container bg-transparent border-2'>
+            <input type='text' placeholder='Name' class='w-100 m-auto form-control' />
+            <input type='text' placeholder='Email' class='w-100  m-auto form-control' />
+            <input type='text' placeholder='Your question related to?' class='w-100  m-auto form-control' />
+            <input type='text' placeholder='Tell us' class=' textarea w-100  m-auto form-control' />
+        </div>
+        <div class='jumbotron shadow w-100 container bg-transparent border-2'>
+            <div>
+                <img src="photo.png" alt=""><span class='ml-4 lead text-muted'>Attach File</span>
+            </div>
+            <div class='row align-items-center'>
+                <div class="col">
+                    <input type='text' class='m-auto form-control' />
+                </div>
+                <div class="col submits">
+                    <input type='submit' value='' class='m-auto form-control' />
+                    <small class='h4 text-center text-muted m-auto d-block'>Submit</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

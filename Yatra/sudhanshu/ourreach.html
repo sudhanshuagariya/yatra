@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .flying-man {
+            background: #ffe6e6;
+            position: relative;
+			margin: 6%;
+
+			
+        }
+
+        .flying-man img {
+            max-width: 100px;
+            height: 10vh;
+            margin: auto;
+        }
+
+        .flying-man > span.tag-line {
+            position: absolute;
+            top: 2vh;
+            z-index: 10;
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            color: black;
+            
+            font-family: serif;
+        }
+        .circle_container
+{
+	width : 128px;
+	height : 128px;
+	margin : 0;
+	padding : 0;
+/*	border : 1px solid red; */
+}
+
+/* Circle Main draws the actual circle */
+.circle_main
+{
+	width : 150%;
+	height : 130%;
+	border-radius : 35%;
+		/* can alter thickness and colour of circle on this line */
+	margin : 0;
+	padding : 0;
+    background : #ffffe6;
+}
+
+/* Circle Text Container - constrains text area to within the circle */
+.circle_text_container
+{
+	/* area constraints */
+	width : 70%;
+	height : 70%;
+	max-width : 70%;
+	max-height : 70%;
+	margin : 0;
+	padding : 0;
+
+	/* some position nudging to center the text area */
+	position : relative;
+	left : 15%;
+	top : 15%;
+	
+	/* preserve 3d prevents blurring sometimes caused by the text centering in the next class */
+	transform-style : preserve-3d;
+	
+	/*border : 1px solid green;*/
+}
+
+/* Circle Text - the appearance of the text within the circle plus vertical centering */
+.circle_text
+{
+	/* change font/size/etc here */
+	font: 16px "Tahoma", Arial, Serif;	
+	text-align : center;
+	
+	/* vertical centering technique */
+	position : relative;
+	top : 50%;
+	transform : translateY(-50%);
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 70px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class='flying-man'>
+        <span class='tag-line' align="center">
+           OUR REACH
+        </span>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            
+<div class="carousel-inner">
+	<div class="row">
+		<div class="column">
+    		<div class="circle_container">
+				<div class="circle_main">
+					<div class="circle_text_container">
+						<div class = "circle_text">
+							<p style="color:red;" href="#"><b>200+</p>Campus ambassadors</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+        <div class="column">           
+    		<div class="circle_container">
+				<div class="circle_main">
+					<div class="circle_text_container">
+						<div class = "circle_text">
+							<p style="color:red;"><b>40000+</p>Young individuals</b>
+						</div>
+					</div>
+				</div>
+			</div>            
+        </div>
+    	<div class="column">
+            <div class="circle_container">
+				<div class="circle_main">
+					<div class="circle_text_container">
+						<div class = "circle_text">
+							<p style="color:red;"><b>2500</p>Academic Institutions</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+    <div class="row">
+		<div class="column">
+    		<div class="circle_container">
+				<div class="circle_main">
+					<div class="circle_text_container">
+						<div class = "circle_text">
+							<p style="color:red;"><b>200+</p>Campus ambassadors</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+        <div class="column">           
+    		<div class="circle_container">
+				<div class="circle_main">
+					<div class="circle_text_container">
+						<div class = "circle_text">
+							<p style="color:red;"><b>40000+</p>Young individuals</b>
+						</div>
+					</div>
+				</div>
+			</div>            
+        </div>
+    	<div class="column">
+            <div class="circle_container">
+				<div class="circle_main">
+					<div class="circle_text_container">
+						<div class = "circle_text">
+							<p style="color:red;"><b>2500</p>Academic Institutions</b>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

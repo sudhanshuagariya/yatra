@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        .team-about {
+            background: lightgreen;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .team-about>div:nth-child(2) {
+            height: 50px;
+            background: white;
+            border-radius: 0 100px 0 0;
+        }
+        
+        .team-about button {
+            border-radius: 50px;
+        }
+        
+        .team-about .style {
+            font-family: 'Satisfy', cursive;
+            font-size: 4.5rem;
+        }
+        
+        .team-about .img {
+            width: 650px;
+            position: absolute;
+            top: -120px;
+            left: 0px;
+        }
+        
+        .col:nth-child(2) {
+            right: 150px;
+        }
+        
+        @media(max-width: 1100px) {
+            .team-about .img {
+                display: none;
+            }
+            .col:nth-child(2) {
+                right: 100px;
+                display: block!important;
+                width: 100%!important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class='team-about'>
+        <div class='row'>
+            <class class="col offset-0">
+                <img src="singing event.png" class='img' alt="">
+            </class>
+            <class class="col mx-auto mr-0 text-center text-center pt-5 pb-5">
+                <h2 class='style'>nirvara</h2>
+                <p class='lead font-weight-normal text-muted'>play the rythm of your choice .</p>
+                <p class='font-weight-bold'>get the people to love your voice</p>
+                <button class='btn btn-primary font-weight-bold shadow px-5 py-2'>Register</button>
+            </class>
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

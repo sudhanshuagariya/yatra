@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .cookie {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #ffc;
+            position: absolute;
+            width: 100%;
+        }
+        
+        .cookie>div {
+            margin-left: 20px;
+        }
+        
+        .cookie img {
+            border-radius: 50%;
+        }
+        
+        .cookie button {
+            border-radius: 50px;
+            border: 1px solid lightgreen;
+            background-color: white;
+            color: black;
+            transition: 200ms linear;
+            font-size: bold;
+        }
+        
+        .cookie button:hover {
+            border: 1px solid white;
+            background: lightgreen;
+            transition: 200ms linear;
+            color: white;
+        }
+        
+        @media(max-width:750px) {
+            .cookie img {
+                display: none;
+            }
+            .cookie {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class='cookie'>
+        <div class="logo">
+            <img src="photo.png" class='border-0' alt="" class="img-thumbnail">
+        </div>
+        <div class="info lead">We use cookies to improve your experience using this site. <a href="">More information</a></div>
+        <div class="button">
+            <button class="btn px-5 py-2">Accept</button>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        $(".cookie button").click(() => {
+            $('.cookie').remove()
+        })
+    </script>
+</body>
+
+</html>

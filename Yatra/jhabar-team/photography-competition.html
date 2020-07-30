@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .photo-comp {
+            background: lightblue;
+        }
+        
+        .photo-comp img {
+            width: 300px;
+            position: relative;
+            bottom: 10px;
+        }
+        
+        .photo-comp .media .head h2 {
+            position: relative;
+            bottom: 60px;
+            left: 80px;
+            font-weight: bolder;
+        }
+        
+        .photo-comp .buttons>.btn {
+            border-radius: 50px;
+        }
+        
+        .photo-comp .buttons>.btn:nth-child(2) {
+            margin-left: 20px;
+        }
+        
+        @media(max-width: 768px) {
+            .buttons>.btn:nth-child(2) {
+                margin-left: 5px;
+            }
+            .btn {
+                padding-left: 15px!important;
+                padding-right: 15px!important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="photo-comp pb-4">
+        <div class="media">
+            <div class='head'>
+                <img class="align-self-start mr-3" src="singing event.png" alt="Generic placeholder image">
+                <h2 class="align-self-start mr-3 h4 text-uppercase">Shutter Bug</h2>
+            </div>
+            <div class="media-body mt-5 px-5">
+                <h5 class="mt-0 font-weight-bold">Photography Competition</h5>
+                <p class='text-danger font-italic'>Registration Amount: $79</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic tempora tenetur perferendis, modi a dicta quam! Cupiditate asperiores reiciendis error provident. Iusto mollitia sequi veritatis architecto commodi illo tempora quos?.</p>
+                <h5 class='font-weight-bold'>Guidelines:</h5>
+                <p>1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. <span class="text-muted">related to the topic </span></p>
+                <div class='buttons'>
+                    <button class="read-more btn btn-primary px-4 py-2">Read More</button>
+                    <button class="register btn btn-primary px-4 py-2">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        let media = '<div class="head"><img class="align-self-start mr-3" src="singing event.png" alt="Generic placeholder image"><h2 class="align-self-start mr-3 h4 text-uppercase">Shutter Bug</h2></div>';
+        console.log($(this).width())
+
+        function changer() {
+            if ($(this).width() <= 760) {
+                $('.head').remove()
+            } else {
+                if (!$('.head')) {
+                    $('.media').prepend(media);
+                }
+            }
+        }
+        $().ready(() => {
+            changer();
+        })
+
+
+
+        $(window).resize((e) => {
+            console.log($(this).width())
+            if ($(this).width() <= 760) {
+                $('.head').remove()
+            } else {
+                console.log($('.head').length)
+                if ($('.head').length == 0) {
+                    // alert(1)
+                    $('.media').prepend(media);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
